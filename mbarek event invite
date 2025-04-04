@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Event invite</title>
+        <style>
+        body{
+            color:white;
+            background-color:black;
+             font-family: Arial, sans-serif
+        }
+        #t{
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+             border: 2px solid white ;
+        }
+        
+            
+        </style>
+    </head>
+    <body>
+        <div id="t">
+        <h1 id="a">You're Invited to an Amazing Event</h1>
+        <h2 id="b">Cyber Security Meetup 2025</h2>
+        
+        <p id="c">
+            📅 Date: April 20, 2025 <br>
+            ⏰ Time: 6:00 PM - 10:00 PM <br>
+            📍 Location: Tech Hub, London <br>
+            👔 Dress Code: Smart Casual
+            
+        </p>
+        
+        
+        <p id="d">"Join us for an exclusive evening of networking and cybersecurity insights!"</p>
+        <button id="e">welcom</button>
+        
+        </div>
+    </body>
+</html>
