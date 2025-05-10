@@ -1,40 +1,117 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Project: Event invite</title>
-        <style>
-        body{
-            color:white;
-            background-color:black;
-             font-family: Arial, sans-serif ;
-        }
-        #t{
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-             border: 2px solid white ;
-        }
-        
-            
-        </style>
-    </head>
-    <body>
-        <div id="t">
-        <h1 id="a">You're Invited to an Amazing Event</h1>
-        <h2 id="b">Cyber Security Meetup 2025</h2>
-        
-        <p id="c">
-            📅 Date: April 20, 2025 <br>
-            ⏰ Time: 6:00 PM - 10:00 PM <br>
-            📍 Location: Tech Hub, London <br>
-            👔 Dress Code: Smart Casual
-            
-        </p>
-        
-        
-        <p id="d">Join us for an exclusive evening of networking and cybersecurity insights</p>
-        
-        
-        </div>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireframe</title>
+    <link rel="stylesheet" href="style.css" />
+      <style>
+          :root {
+  --paper: oklch(7 0 0);
+  --ink: color-mix(in oklab, var(--color) 5%, black);
+  --font: 100%/1.5 system-ui;
+  --space: clamp(6px, 6px + 2vw, 15px);
+  --line: 1px solid;
+  --container: 1280px;
+}
+/* ====== Base Elements ======
+ General rules for basic HTML elements in any context */
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: var(--font);
+}
+a {
+  padding: var(--space);
+  border: var(--line);
+  max-width: fit-content;
+}
+img,
+svg {
+  width: 100%;
+  object-fit: cover;
+}
+/* ====== Site Layout ====== 
+Setting the overall rules for page regions
+https://www.w3.org/WAI/tutorials/page-structure/regions/
+*/
+main {
+  max-width: var(--container);
+  margin: 0 auto calc(var(--space) * 4) auto;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+/* ====== Articles Grid Layout ====
+Setting the rules for how articles are placed in the main element.
+Inspect this in Devtools and click the "grid" button in the Elements view
+Play with the options that come up.
+https://developer.chrome.com/docs/devtools/css/grid
+https://gridbyexample.com/learn/
+*/
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space);
+  > *:first-child {
+    grid-column: span 2;
+  }
+}
+/* ====== Article Layout ====== 
+Setting the rules for how elements are placed in the article. 
+Now laying out just the INSIDE of the repeated card/article design.
+Keeping things orderly and separate is the key to good, simple CSS.
+*/
+article {
+  border: var(--line);
+  padding-bottom: var(--space);
+  text-align: left;
+  display: grid;
+  grid-template-columns: var(--space) 1fr var(--space);
+  > * {
+    grid-column: 2/3;
+  }
+  > img {
+    grid-column: span 3;
+  }
+}
+          </style>
+  </head>
+  <body>
+  <header>
+  <h1>Essential Web Development Concepts</h1>
+  <p>
+         Learn about the key elements every web developer should know: README files, wireframes, and Git branches.
+  </p>
+</header>
+<main>
+  <article>
+    <img src="https://raw.githubusercontent.com/CodeYourFuture/Module-Onboarding/refs/heads/main/Wireframe/placeholder.svg" alt="" />
+    <h2>What is the purpose of a wireframe?</h2>
+    <p>
+     A wireframe is a visual representation of a website's layout, structure, and user interface elements. It helps developers and designers organize content and plan the website's functionality before starting development.
+    </p>
+    <a href="https://www.experienceux.co.uk/faqs/what-is-wireframing/">Read more</a>
+  </article>
+ <article>
+        <img src="https://raw.githubusercontent.com/CodeYourFuture/Module-Onboarding/refs/heads/main/Wireframe/placeholder.svg" alt="Placeholder image" />
+        <h2>What is the purpose of a README file?</h2>
+        <p>A README file is an essential part of any project. It explains the purpose of the project, how to install it, and provides any necessary instructions. It helps developers understand how to use the project and how to contribute to it.</p>
+        <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">Read more</a>
+      </article>
+  <article>
+        <img src="https://raw.githubusercontent.com/CodeYourFuture/Module-Onboarding/refs/heads/main/Wireframe/placeholder.svg" alt="Git Branch image" />
+        <h2>What is a branch in Git?</h2>
+        <p>A Git branch allows developers to work on new features or fixes without affecting the main codebase. It provides a way to isolate changes and then merge them back into the main project when ready.</p>
+        <a href="https://www.w3schools.com/git/git_branch.asp">Read more</a>
+      </article>
+</main>
+<footer>
+  <p id="l">
+    2025 by mbarek
+  </p>
+</footer>
+  </body>
 </html>
